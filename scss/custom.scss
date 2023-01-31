@@ -1,0 +1,19 @@
+// Custom.scss
+// Вариант А: Включите весь Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+// Then add additional custom code here
+/* HEADER */
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: none;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0.25rem;
+}

@@ -1,0 +1,629 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --gap: 30px;
+    --color-white: #FFFFFF;
+}
+
+@font-face {
+  /* Типографика */
+    font-family: "Roboto";
+    src: local("Roboto-Regular"),
+    url("../font/Roboto-Regular.woff2") format("woff2"),
+    url("../font/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    /* Блочная модель*/
+    font-display: swap;
+}
+
+@font-face {
+  /* Типографика */
+    font-family: "Roboto";
+    src: local("Roboto-Bold"),
+    url("../font/Roboto-Bold.woff2") format("woff2"),
+    url("../font/Roboto-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    /* Блочная модель*/
+    font-display: swap;
+}
+
+
+.list-reset {
+  /* Блочная модель */
+    list-style: none;
+}
+
+.btn-reset {
+  /* Блочная модель */
+    padding: 0;
+    border: none;
+    /* Оформление */
+    background-color:transparent;
+    cursor: pointer;
+}
+
+:root {
+    --denim-blue:#3F2AFF;
+    --granite-gray:#2E2B44;
+    --Dull-gray:#666666;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  html {
+    /* Типографика */
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+  
+  body {
+    /* Блочная модель */
+    margin: 0;
+    /* Типографика */
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+  }
+  
+  ul {
+    /* Блочная модель */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  button {
+    /* Блочная модель */
+    padding: 0;
+    /* Оформление */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img {
+    /* Блочная модель*/
+    display: block;
+    max-width: 100%;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    /* Блочная модель */
+    margin: 0;
+  }
+  
+  h2 {
+    /* Типографика */
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+  }
+  
+  h3 {
+    /* Типографика */
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+  
+  p {
+    /* Блочная модель */
+    margin: 0;
+  }
+  
+  /* Header */
+  .header {
+    /* Блочная модель */
+    padding: 25px 0px;
+    /* Оформление */
+    background-color: var(--denim-blue);
+  }
+  
+  .header__logo {
+    height: 16px;
+  }
+  
+  .container--header {
+    /* Блочная модель*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__navigation {
+    /* Блочная модель*/
+    display: none;
+    width: 100%;
+    margin-top: 31px;
+    /* Типографика */
+    font-size: 1.125rem;
+  }
+  
+  .desk-nav__list {
+    /* Блочная модель*/
+    display: flex;
+    justify-content: space-around;
+    /* Блочная модель */
+    margin: 0 -8px;
+    color: #fff;
+  }
+
+  .nav__link {
+    /* Типографика */
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+  }
+
+  .nav__item {
+    /* Блочная модель */
+    margin-right: 46px;
+  }
+
+  .nav__item:last-child {
+    /* Блочная модель */
+    margin-right: 0px;
+  }
+  
+  .mobile-menu-cont {
+    /* Блочная модель*/
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .header__mobile-menu-cont {
+    /* Блочная модель */
+    height: 30px;
+    margin-left: auto;
+  }
+  
+  .header__mobile-menu-button {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .mobile-menu {
+    /* Блочная модель*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    padding: 25px 15px;
+    /* Оформление */
+    background-color: var(--granite-gray);
+    color: #fff;
+  }
+  
+  .mobile-menu--is-active {
+    /* Блочная модель*/
+    display: block;
+  }
+  
+  .mobile-menu__close-button {
+    /* Блочная модель*/
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-bottom: 22px;
+  }
+  
+  .mobile__item:not(:last-child) {
+    /* Блочная модель */
+    margin-bottom: 56px;
+  }
+  
+  .mobile__link {
+    /* Типографика */
+    font-size: 1.125rem;
+    line-height: 21.09px;
+  }
+  
+  /* Section */
+  
+  .section {
+    /* Блочная модель */
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .header__logo {
+    /* Блочная модель */
+    height: 16px;
+  }
+  
+  .container--header {
+    /* Блочная модель*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__navigation {
+    /* Блочная модель*/
+    display: none;
+    width: 100%;
+    margin-top: 31px;
+    /* Типографика */
+    font-size: 1.125rem;
+  }
+  
+  .desk-nav__list {
+    /* Блочная модель*/
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -8px;
+    color: #fff;
+  }
+  
+  .desk-nav__item {
+    /* Блочная модель*/
+    display: inline-block;
+  }
+  
+  .mobile-menu-cont {
+    /* Блочная модель*/
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .header__mobile-menu-cont {
+    /* Блочная модель */
+    height: 30px;
+    margin-left: auto;
+  }
+  
+  .header__mobile-menu-button {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .mobile-menu {
+    /* Блочная модель*/
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    padding: 25px 15px;
+    /* Оформление */
+    background-color: var(--granite-gray);
+    color: #fff;
+  }
+  
+  .mobile-menu--is-active {
+    /* Блочная модель*/
+    display: block;
+  }
+  
+  .mobile-menu__close-button {
+    /* Блочная модель*/
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    margin-bottom: 22px;
+  }
+  
+  .mobile__item:not(:last-child) {
+    /* Блочная модель */
+    margin-bottom: 56px;
+  }
+  
+  .mobile__item-link {
+    /* Типографика */
+    font-size: 1.125rem;
+    line-height: 21.09px;
+  }
+  
+  /* Hero */
+  .section__hero {
+    /* Оформление */
+    background: radial-gradient(49% 49% at 67.78% 84.57%, #555681 0%, #2E2B44 100%);
+    color: #fff;
+  }
+  
+  .hero__title {
+    /* Блочная модель */
+    margin-bottom: 5px;
+    /* Типографика */
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1em;
+  }
+  
+  .hero__text {
+    /* Блочная модель */
+    margin-bottom: 45px;
+  }
+  
+  .hero__action {
+    /* Блочная модель */
+    padding: 20px 55px;
+    /* Оформление */
+    background: var(--denim-blue);
+    border-radius: 20px;
+    color: #fff;
+    /* Типографика */
+    font-weight: 700;
+    line-height: 1.25em;
+    text-decoration: none;
+  }
+  
+  /* Advantages */
+  .advantages__top {
+    align-items: flex-start;
+    /* Блочная модель */
+    margin-bottom: 22px;
+  }
+  
+  .advantages__decor {
+    /* Блочная модель*/
+    display: none;
+  }
+  
+  .advantages__info {
+    /* Блочная модель*/
+    align-self: flex-start;
+  }
+  
+  .advantages__title {
+    /* Блочная модель */
+    margin-bottom: 3px;
+  }
+  
+  .advantages__desc {
+    color: var(--Dull-gray);
+    line-height: 1.5rem;
+  }
+  
+  .advantages__item {
+    /* Блочная модель */
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .advantages__item:last-child {
+    margin-bottom: 0px;
+  }
+
+  .advantages__item-img {
+    /* Блочная модель */
+    max-width: 80px;
+    min-height: 80px;
+  }
+  
+  .advantages__item-desc {
+    /* Типографика */
+    font-weight: 700;
+    line-height: 1.2rem;
+    color: var(--Dull-gray)
+  }
+  
+  /* Teachers */
+  .section--teachers {
+    /* Оформление */
+    background-color: var(--granite-gray);
+  }
+  
+  .teachers__title {
+    color: #fff;
+    line-height: .8em;
+    /* Блочная модель */
+    margin-bottom: 28px;
+  }
+  
+  .teachers__list {
+    /* Блочная модель */
+    margin-bottom: -26px;
+  }
+  
+  .teachers__item {
+    color: #fff;
+    /* Блочная модель */
+    margin-bottom: 23px;
+  }
+  
+  .teacher__img {
+    /* Блочная модель */
+    width: 100%;
+    height: 180px;
+    margin-bottom: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .teacher__title {
+    /* Блочная модель */
+    margin-bottom: 10px;
+  }
+  
+  .teacher__text {
+    opacity: 0.5;
+    line-height: 1.5rem;
+  }
+  
+  /* Courses */
+  .courses__title {
+    /* Блочная модель */
+    margin-bottom: 30px;
+    line-height: 0.6em;
+  }
+  
+  .courses__list {
+    /* Блочная модель */
+    margin-bottom: -30px;
+  }
+  
+  .courses__item {
+    /* Блочная модель */
+    margin-bottom: 30px;
+  }
+  
+  .course {
+    /* Блочная модель*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 653px;
+    border-radius: 20px;
+  }
+  
+  .course::after {
+    /* Блочная модель */
+    content: '-- часов';
+    position: absolute;
+    min-width: 95px;
+    height: 24px;
+    z-index: 12;
+    top: 10px;
+    right: 25px;
+    padding-top: 1px;
+    padding-left: 29px;
+    /* Оформление */
+    background: url(../img/clock.svg) no-repeat left top;
+    line-height: 1.5rem;
+    color: #fff;
+  }
+  
+  .course--40h::after {
+    content: '40 часов';
+  }
+  
+  .course--60h::after {
+    content: '60 часов';
+  }
+  
+  .course--80h::after {
+    content: '80 часов';
+  }
+  
+  .course__img {
+    /* Блочная модель */
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .course__content {
+    flex-grow: 1;
+    /* Блочная модель*/
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 31px 30px;
+    /* Оформление */
+    background-color: #EDF0F9;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+  
+  .course__title {
+    /* Блочная модель */
+    max-width: 250px;
+    margin-bottom: 9px;
+    line-height: 1.3em;
+  }
+  
+  .course__text {
+    /* Блочная модель */
+    margin-bottom: auto;
+    opacity: 0.6;
+    line-height: 1.5rem;
+  }
+  
+  .course__more-button {
+    /* Блочная модель */
+    padding: 20px 56px;
+    margin-top: 25px;
+    /* Оформление */
+    background-color: var(--denim-blue);
+    border-radius: 20px;
+    /* Типографика */
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Footer */
+  .footer__list {
+    /* Блочная модель*/
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 28px 0;
+    /* Оформление */
+    background-color: var(--granite-gray);
+  }
+  
+  .footer__contact-img {
+    /* Блочная модель */
+    width: 24px;
+    height: 24px;
+  }
+
+  .copy__right {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer__copyright {
+    /* Типографика */
+    font-size: 0.8125rem;
+    line-height: 1.171em;
+  }
+  
+  .reg {
+    /* оформление */
+    color: var(--denim-blue);
+    /* Блочная модель */
+    vertical-align: middle;
+  }
